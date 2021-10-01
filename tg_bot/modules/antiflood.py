@@ -36,7 +36,7 @@ def check_flood(bot: Bot, update: Update) -> str:
         return ""
 
     try:
-        bot.restrict_chat_member(chat.id, user.id, can_send_messages=False)
+        bot.restrict_chat_member(chat.id, user_id, until_date=1, can_send_messages=False)
         msg.reply_text("Shhhhh...")
 
         return "<b>{}:</b>" \
