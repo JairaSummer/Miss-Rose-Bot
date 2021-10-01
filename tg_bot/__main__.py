@@ -132,7 +132,7 @@ def start(bot: Bot, update: Update, args: List[str]):
                                     reply_markup=InlineKeyboardMarkup(
                                         [[InlineKeyboardButton(text="Add me to your chat!", url="t.me/{}?startgroup=true".format(bot.username))]]))
     else:
-        update.effective_message.reply_text("Hello all Join @ProIndians.")
+        update.effective_message.reply_text("Hey there!, I'm here to help you manage your groups! Hit /help to find out more about how to use me to my full potential.")
 
 
 # for test purposes
