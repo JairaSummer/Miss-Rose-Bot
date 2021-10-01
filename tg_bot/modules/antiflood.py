@@ -38,6 +38,10 @@ def check_flood(bot: Bot, update: Update) -> str:
     try:
         bot.restrict_chat_member(chat.id, user.id, until_date=1, can_send_messages=False)
         bot.deleteMessage(chat.id, msg.message_id - 1)
+        bot.deleteMessage(chat.id, msg.message_id - 2)
+        bot.deleteMessage(chat.id, msg.message_id - 3)
+        bot.deleteMessage(chat.id, msg.message_id - 4)
+        bot.deleteMessage(chat.id, msg.message_id - 5)
         msg.reply_text("Shhhhh...")
 
         return "<b>{}:</b>" \
